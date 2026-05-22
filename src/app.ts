@@ -2,7 +2,7 @@ import express, { type Express } from "express";
 import type { Request, Response } from "express";
 import cors from "cors";
 import * as pinoHttp from "pino-http";
-import router from "./routes";
+import router from "./routes/index";
 import { logger } from "./lib/logger";
 
 const app: Express = express();
