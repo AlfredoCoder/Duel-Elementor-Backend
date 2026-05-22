@@ -1,7 +1,7 @@
 import { Router, type IRouter } from "express";
 import { db, usersTable, matchesTable, roundsTable } from "@workspace/db";
 import { eq, or, sql, count } from "drizzle-orm";
-import { requireAuth } from "../lib/auth";
+import { requireAuth } from "../lib/auth.js";
 import { GetUserParams, UpdateUserParams, UpdateUserBody } from "@workspace/api-zod";
 
 const router: IRouter = Router();

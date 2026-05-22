@@ -1,7 +1,7 @@
 import { createServer } from "http";
-import app from "./app";
-import { attachWsServer } from "./lib/wsServer";
-import { logger } from "./lib/logger";
+import app from "./app.js";
+import { attachWsServer } from "./lib/wsServer.js";
+import { logger } from "./lib/logger.js";
 
 const rawPort = process.env["PORT"];
 

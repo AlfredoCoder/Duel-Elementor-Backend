@@ -3,9 +3,9 @@ import { type IncomingMessage } from "http";
 import { type Server } from "http";
 import { db, matchesTable, roundsTable, usersTable } from "@workspace/db";
 import { eq } from "drizzle-orm";
-import { verifyToken } from "./auth";
-import { resolveRound, type Elemental } from "./gameEngine";
-import { logger } from "./logger";
+import { verifyToken } from "./auth.js";
+import { resolveRound, type Elemental } from "./gameEngine.js";
+import { logger } from "./logger.js";
 
 type ServerMsg =
   | { type: "QUEUE_JOINED" }

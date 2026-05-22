@@ -3,7 +3,7 @@ import bcrypt from "bcryptjs";
 import { db, usersTable } from "@workspace/db";
 import { eq } from "drizzle-orm";
 import { RegisterBody, LoginBody } from "@workspace/api-zod";
-import { signToken, requireAuth } from "../lib/auth";
+import { signToken, requireAuth } from "../lib/auth.js";
 
 const router: IRouter = Router();
 

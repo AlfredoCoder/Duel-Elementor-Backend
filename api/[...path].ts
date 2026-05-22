@@ -12,10 +12,10 @@ export default async function handler(req: any, res: any) {
     };
 
     try {
-      mod = await import("../src/app");
+      mod = await import("../src/app.js");
       app = mod && (mod.default ?? mod);
     } catch (e1: unknown) {
-      console.warn("Import ../src/app failed, attempting ../dist/index.mjs", fmtErr(e1));
+      console.warn("Import ../src/app.js failed, attempting ../dist/index.mjs", fmtErr(e1));
       try {
         // try the compiled dist bundle as a fallback
         const distPath = "../dist/index.mjs";

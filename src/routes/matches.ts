@@ -1,7 +1,7 @@
 import { Router, type IRouter } from "express";
 import { db, matchesTable, roundsTable, usersTable } from "@workspace/db";
 import { eq, desc, and, or, sql } from "drizzle-orm";
-import { requireAuth } from "../lib/auth";
+import { requireAuth } from "../lib/auth.js";
 import {
   CreateMatchBody,
   GetMatchParams,
@@ -9,7 +9,7 @@ import {
   SubmitRoundBody,
   ListMatchesQueryParams,
 } from "@workspace/api-zod";
-import { resolveRound, getAiChoice, type Elemental } from "../lib/gameEngine";
+import { resolveRound, getAiChoice, type Elemental } from "../lib/gameEngine.js";
 
 const router: IRouter = Router();
 
